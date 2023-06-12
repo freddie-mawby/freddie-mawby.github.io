@@ -22,10 +22,12 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
+                                <font size="5pt">
 								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
 								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
                                 <li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-map">Maps</span></a></li>
 								<li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                                </font>
 							</ul>
 						</nav>
 
@@ -60,15 +62,58 @@
 			</div>
             <div class="container" align="center">
                     <p></p>
-                     <iframe src="https://freddieatwoodmawby.users.earthengine.app/view/valle-de-larve-snow-coverage-102021-032022" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                     <iframe src="https://freddieatwoodmawby.users.earthengine.app/view/valle-de-larve-snow-coverage-102021-032022" width="900" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
                     <p></p>
             </div>
             <div class="container">
-                <p>Remote sensing is the documentation of geographic information from afar (without directly going onto the field to                          document it). This can be using images from drones, satellites, planes, or even phones. Remote sensing data tends to be                    more raster-based, but it can be converted into vector data if that’s more relevant to the cartography task at hand.                      There are different types of remote sensing, especially when it comes to satellite imagery. We distinguish between                        passive and active sensing. Passive sensing is when the satellite is measuring the electromagnetic energy that is                          reflecting off the planet’s surface (which is an issue when it is cloudy, since it doesn’t penetrate clouds as well).                      The satellite imagery that I used in this assignment is passive sensing, obtained from Sentinel 2 satellite, and, to a                    lesser extent, from the Landsat satellites. Active sensing (like LIDAR), on the other hand, is when the satellite emits                    its own electromagnetic waves, and then captures their reflection, which allows it to have a much higher spatial                          resolution than passive sensors (~1 m resolution for active sensors compared to ~20 m resolution for passive sensors).                    These sensors are collecting different wavelengths, different bands of both visible and non-visible light. Everything                      has its own spectral signature, which makes it possible to identify the type of land (urban, healthy vegetation,                          unhealthy vegetation, water, snow, etc.).</p>
-                <p>Because of these different spectral signatures, it is possible to use data from the different bands to highlight the                      different land types in the map. A colour composite image is the layering of red, green, and blue images to create a                      new image. So for a true colour composite image (the image that best represents reality), one would use the satellite                      data for the red, green, and blue visible light wavelengths for the red, green, and blue layers respectively. But, if                      one wanted a certain type of land to stand out on their map (for example, better to better showcase the difference                        between healthy and unhealthy vegetation), it would be better to use the data from a different sensor/band in their                        colour composite. This is called a false colour composite image.</p>
-                <p>For my remote sensing assignment, I chose to make a map of the Arve Valley, in the French Alps using Google Earth                          Engine, as it provides open access to all of the satellite data often used in remote sensing. The professor discussed                      how we tend to be egocentric in mapmaking, by focusing on places that are closer to us, and that definitely resonates                      here, as I grew up in the Arve Valley. The Arve Valley is a tourist area, known for its proximity to the Mont Blanc and                    its many skiing domains. It is (or was, depending on when you’re reading this) also home to several glaciers, including                    the Mer de Glace. My original plan was to take satellite data from 1976 and from 2021 to show how the glacier’s area                      has changed over 45 years. However, I struggled in using Landsat data and clearing the cloud coverage. So instead, I                      chose to only use Sentinel 2 data from 2021-2022, and showcase how the snow coverage changes over the course of a ski                      season (October to March) to assess when the best time to go skiing is. Sentinel 2 is a passive sensor with 12 bands.                      For each month, I created a true colour composite using bands B4 (red), B3 (green), and B2 (blue), and a false colour                      composite that highlighted snow coverage in blue using bands B12 (SWIR), B11 (SWIR), and B5 (VNIR). Snow reflects a lot                    of the very near infrared wavelengths, so by including this in my false colour composite image, it makes the snow stand                    out a lot against the rest of the map.</p> 
+                <p>Remote sensing is the documentation of geographic information from afar (without directly going onto the field to document it). This can be using images from drones, satellites, planes, or even phones. Remote sensing data tends to be more raster-based, but it can be converted into vector data if that’s more relevant to the cartography task at hand. There are different types of remote sensing, especially when it comes to satellite imagery. We distinguish between passive and active sensing. Passive sensing is when the satellite is measuring the electromagnetic energy that is reflecting off the planet’s surface (which is an issue when it is cloudy, since it doesn’t penetrate clouds as well). The satellite imagery that I used in this assignment is passive sensing, obtained from Sentinel 2 satellite, and, to a lesser extent, from the Landsat satellites. Active sensing (like LIDAR), on the other hand, is when the satellite emits its own electromagnetic waves, and then captures their reflection, which allows it to have a much higher spatial resolution than passive sensors (~1 m resolution for active sensors compared to ~20 m resolution for passive sensors). These sensors are collecting different wavelengths, different bands of both visible and non-visible light. Everything has its own spectral signature, which makes it possible to identify the type of land (urban, healthy vegetation,unhealthy vegetation, water, snow, etc.).</p>
+                <p>Because of these different spectral signatures, it is possible to use data from the different bands to highlight the different land types in the map. A colour composite image is the layering of red, green, and blue images to create a new image. So for a true colour composite image (the image that best represents reality), one would use the satellite data for the red, green, and blue visible light wavelengths for the red, green, and blue layers respectively. But, if one wanted a certain type of land to stand out on their map (for example, better to better showcase the difference between healthy and unhealthy vegetation), it would be better to use the data from a different sensor/band in their colour composite. This is called a false colour composite image.</p>
+                <p>For my remote sensing assignment, I chose to make a map of the Arve Valley, in the French Alps using Google Earth Engine, as it provides open access to all of the satellite data often used in remote sensing. The professor discussed how we tend to be egocentric in mapmaking, by focusing on places that are closer to us, and that definitely resonates here, as I grew up in the Arve Valley. The Arve Valley is a tourist area, known for its proximity to the Mont Blanc and its many skiing domains. It is (or was, depending on when you’re reading this) also home to several glaciers, including the Mer de Glace. My original plan was to take satellite data from 1976 and from 2021 to show how the glacier’s area has changed over 45 years. However, I struggled in using Landsat data and clearing the cloud coverage. So instead, I chose to only use Sentinel 2 data from 2021-2022, and showcase how the snow coverage changes over the course of a ski season (October to March) to assess when the best time to go skiing is. Sentinel 2 is a passive sensor with 12 bands. For each month, I created a true colour composite using bands B4 (red), B3 (green), and B2 (blue), and a false colour composite that highlighted snow coverage in blue using bands B12 (SWIR), B11 (SWIR), and B5 (VNIR). Snow reflects a lot of the very near infrared wavelengths, so by including this in my false colour composite image, it makes the snow stand out a lot against the rest of the map.</p> 
             </div>
-        </div>
+            <div class="container" align="center">
+                <div class="row">
+                    <div class="col-2">
+                        Month
+                    </div>
+                    <div class="col-5">
+                        True colour composite
+                    </div>
+                    <div class="col-5">
+                        False colour composite
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 10px">
+                    <div class="col-2">
+                        October 2021
+                    </div>
+                    <div class="col-5">
+                        <img src="images/oct21_true.png" width="400"/>
+                    </div>
+                    <div class="col-5">
+                        <img src="images/oct21_false.png" width="400"/>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 10px">
+                    <div class="col-2">
+                        November 2021
+                    </div>
+                    <div class="col-5">
+                        <img src="images/nov21_true.png" width="400"/>
+                    </div>
+                    <div class="col-5">
+                        <img src="images/nov21_false.png" width="400"/>
+                    </div>
+                </div>
+                <p><i>Table of the true and false composite layers for October and November 2021</i></p>
+            </div>
+             <div class="container">
+                <p>I also managed to create a graph of the snow coverage over time using the same technique as NDVI (which is usually used to measure the proportion of healthy vegetation, but functions the same way in this context), but could not include it in the Google Earth Engine App itself.</p>
+                <div class="container" align="center">
+                    <img src="images/snowcover.jpeg" width="600" style="padding-bottom:10px"/>
+                    <p><i>Graphical representation of the evolution of snow coverage in the Mont Blanc mountain range (and surrounding areas)</i></p>
+                </div> 
+             </div>
+          </div>
                     
             <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

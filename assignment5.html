@@ -1,0 +1,98 @@
+<html>
+    <head>
+		<title>Freddie Atwood Mawby | Interactive Map</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<a href="index.html"><span class="image avatar48"><img src="images/portrait_green.jpg" alt="" /></span>
+							<h1 id="title">Freddie Mawby</h1>
+							<p>Humanities & Earth Sciences Student</p></a>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+                                <font size="5pt">
+								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                                <li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-map">Maps</span></a></li>
+								<li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                                </font>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/winifred-mawby-308baa227/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/freddie-mawby/" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://bascsciencespo.wordpress.com/" class="icon brands fa-wordpress"><span class="label">Scubasc</span></a></li>
+							<li><a href="mailto:freddie@mawby.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+        
+        <div id="main">
+            <div class="container" align="center">
+
+				<header>
+                    <p></p>
+                    <p></p>
+					<h2 class="alt">Interactive Choropleth Map</h2>
+					<h6>Made using Esri Online Web App Builder</h6>
+				</header>
+
+			</div>
+            <div class="container" align="center">
+                    <p></p>
+                     <iframe src="https://uni-utrecht.maps.arcgis.com/apps/webappviewer/index.html?id=65593fc1305a476dbb1528a955572aae" width="900" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <p></p>
+            </div>
+            <div class="container">
+                <p>The aim of this assignment was to make an interactive version of our choropleth map from assignment 3.  Esri Online is an easy way to share, publish and access datasets that can then be used to enhance the datasets you’re working with. It’s a form of online storage that is very easy to use, but Esri is a service that is very expensive financially. A lot of the data on Esri is publicly available, which means that there are open source alternatives. These alternatives are free of cost (you do not have to pay to use them), but also free of use (you have freedom to edit them for your own needs). With open data, it’s important for it to be FAIR. FAIR stands for Findable, Accessible, Interoperable, and Reusable. </p>
+
+<p>This assignment was also the point in the course where I chose to go back and make changes to assignment 3, my original choropleth map. There were a lot of things that I liked about my original choropleth map: I thought the classification was pertinent, the choice of the Mollweide projection felt as neutral as possible, and centering the map around Europe (the most classic choice of central meridians) also felt like the best way to give an overview of the global state of land degradation. I am well-aware that these choices are still biassed, particularly the choice of central meridians, but these still felt like the most relevant choices within the context of my map, and as such, I kept them in my interactive map as well. As mentioned previously, however, I did want to change my colour scale, and more importantly, not show the countries with no data as having less than 5% land degradation. I implemented these changes in my interactive map.</p>
+
+<p>For my interactive web map, I took the shapefile I obtained from the original choropleth map of SDG indicator 15.3.1, and created an online map using Esri Online Web App Builder. Because this one was interactive, it was important to me that the pop-ups (the information that shows up when you click on a feature) showed the right information. There was some selection involved, since there were many other categories in my attribute table that were not relevant to the map I was making. Now, when you click on a country, you can see its name and the percentage of total land that is damaged. I originally made this map as an Instant App, as opposed to a Web App, which had an interactive legend, allowing the user to click on the categories I had defined and see all the countries that fit into it. I enjoyed this feature, so when I remade this map in the Web App Builder, I chose to include the feature “filter by”, which essentially has the same effect, but allows for more specific filtering (and better visualisation on this website).
+</p> 
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-12-mobile">
+                        <iframe src="https://uni-utrecht.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=75a998e980b745df8684b33522943ef2" width="450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <p><i>SDG 15.3.1 interactive choropleth map, version 1 (instant app)</i></p>
+                    </div>
+                    <div class="col-6 col-12-mobile">
+                        <iframe src="https://uni-utrecht.maps.arcgis.com/apps/webappviewer/index.html?id=65593fc1305a476dbb1528a955572aae" width="450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <p><i>SDG 15.3.1 interactive choropleth map, version 2 (web app)</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,6 +1,6 @@
 <html>
     <head>
-		<title>Freddie Atwood Mawby | Remote Sensing</title>
+		<title>Freddie Atwood Mawby | Choropleth Map</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,10 +22,12 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
+                                <font size="5pt">
 								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
 								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
                                 <li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-map">Maps</span></a></li>
 								<li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                                </font>
 							</ul>
 						</nav>
 
@@ -57,13 +59,11 @@
 			</div>
             <div class="container" align="center">
                     <p></p>
-                     <img src="images/choropleth_map1.png" width="600" height="400"/>
+                     <img src="images/choropleth_map1.png" width="900" height="600"/>
                     <p></p>
             </div>
             <div class="container">
                 <p>For this assignment, I had to create a choropleth map in QGIS to represent one of the sustainable development goals (SDG), following the guidelines in the book Mapping for a sustainable world (Kraak, Roth, Ricker, Kagawa, & Le Sourd 2020). Their aim in this book is also to map out the different SDG in a way that is communicative and useful to both decision makers and the general public. In section 2 of the book, they go over the importance of map design, and how what seems like minor design choices, such as the colour, the projection, or the central meridian lines, impact how the map is perceived and interpreted by the audience. The visual hierarchy of the map determines what stands out to the user, where their eye will be drawn to first. As I said, maps tell a story, and this story needs to be clear at a glance, which is what I tried to do with my own choropleth map. </p>
-
-                <p>[Explain what a choropleth map is, its advantages and disadvantages (MAUP baby) + the different types of data provided by the UN, and the importance and issues of data autonomy]</p>
 
 <p>I chose to map SDG 15 “Life on Land”, through indicator 15.3.1: proportion of land that is degraded over total land area. The UN defines land degradation as: “the reduction or loss of the biological or economic productivity and complexity of rain fed cropland, irrigated cropland, or range, pasture, forest and woodlands resulting from a combination of pressures, including land use and management practices.” (United Nations, 2022) Mapping for a sustainable world classifies the data for this indicator as Tier 1 data, and, as per the name, it’s a proportion, which means that a choropleth map works well to help visualise it at a global scale. Once I had selected and downloaded my data, it was time to clean it and make it usable in QGIS.</p>
 
@@ -71,11 +71,23 @@
 
 <p>I ended up making my choropleth map twice, as shown by the two figures below. The first time I made it, I chose a custom graduated classification, because I found that none of the preset classifications (equal distribution, equal value, etc.) properly highlighted the differences in land degradation at a global scale. So I chose to have my categories as the following: less than 5%, 5 to 15%, and more than 25%. Because the logo for SDG 15 is green, I originally chose to have my colour scale go from light green for the least degraded countries, to dark green for the most degraded countries, so that the latter stood out more at a glance. In terms of visual hierarchy, I wanted Mexico and The Philippines to stand out even more, as they are considerably more degraded than any other countries in the world, so I added a white border around them. I also added a grey basemap to make the colours stand out more. However, since green has a positive connotation (and since land degradation is usually not regarded as something positive), I figured it would be best to change my colour scale to something more neutral. As such, in my second iteration of the map, I made it yellow, so that the countries with higher land degradation still stood out. I also realised that I had counted countries with no data as having no land degradation, which isn’t accurate, so I made that correction in the second version as well.</p>
 
-<p>When making the layout of the final map, I included the definition of land degradation, because what the UN considers to be land degradation might not be the average user’s definition of land degradation, and I wanted my map to be accessible to all. I also included the percentage of land degradation for Mexico and The Philippines, so that they stood out even further in terms of visual hierarchy.</p> 
+<p>When making the layout of the final map, I included the definition of land degradation, because what the UN considers to be land degradation might not be the average user’s definition of land degradation, and I wanted my map to be accessible to all. I also included the percentage of land degradation for Mexico and The Philippines, so that they stood out even further in terms of visual hierarchy.</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-12-mobile">
+                        <img src="images/choropleth_map2.png" width="450" height="300"/>
+                        <p><i>SDG 15.3.1 choropleth map, version 1</i></p>
+                    </div>
+                    <div class="col-6 col-12-mobile">
+                        <img src="images/choropleth_map1.png" width="450" height="300"/>
+                        <p><i>SDG 15.3.1 choropleth map, version 2</i></p>
+                    </div>
+                </div>
             </div>
         </div>
                     
-            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.min.js" width="450"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
