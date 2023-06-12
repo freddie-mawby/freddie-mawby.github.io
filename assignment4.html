@@ -1,0 +1,82 @@
+<html>
+    <head>
+		<title>Freddie Atwood Mawby | Remote Sensing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<a href="index.html"><span class="image avatar48"><img src="images/portrait_green.jpg" alt="" /></span>
+							<h1 id="title">Freddie Mawby</h1>
+							<p>Humanities & Earth Sciences Student</p></a>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                                <li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-map">Maps</span></a></li>
+								<li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/winifred-mawby-308baa227/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/freddie-mawby/" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://bascsciencespo.wordpress.com/" class="icon brands fa-wordpress"><span class="label">Scubasc</span></a></li>
+							<li><a href="mailto:freddie@mawby.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+        
+        <div id="main">
+            <div class="container" align="center">
+
+				<header>
+                    <p></p>
+                    <p></p>
+					<h2 class="alt">Remote Sensing Map</h2>
+					<h6>Made using Google Earth Engine</h6>
+				</header>
+
+			</div>
+            <div class="container" align="center">
+                    <p></p>
+                     <iframe src="https://freddieatwoodmawby.users.earthengine.app/view/valle-de-larve-snow-coverage-102021-032022" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <p></p>
+            </div>
+            <div class="container">
+                <p>Remote sensing is the documentation of geographic information from afar (without directly going onto the field to                          document it). This can be using images from drones, satellites, planes, or even phones. Remote sensing data tends to be                    more raster-based, but it can be converted into vector data if that’s more relevant to the cartography task at hand.                      There are different types of remote sensing, especially when it comes to satellite imagery. We distinguish between                        passive and active sensing. Passive sensing is when the satellite is measuring the electromagnetic energy that is                          reflecting off the planet’s surface (which is an issue when it is cloudy, since it doesn’t penetrate clouds as well).                      The satellite imagery that I used in this assignment is passive sensing, obtained from Sentinel 2 satellite, and, to a                    lesser extent, from the Landsat satellites. Active sensing (like LIDAR), on the other hand, is when the satellite emits                    its own electromagnetic waves, and then captures their reflection, which allows it to have a much higher spatial                          resolution than passive sensors (~1 m resolution for active sensors compared to ~20 m resolution for passive sensors).                    These sensors are collecting different wavelengths, different bands of both visible and non-visible light. Everything                      has its own spectral signature, which makes it possible to identify the type of land (urban, healthy vegetation,                          unhealthy vegetation, water, snow, etc.).</p>
+                <p>Because of these different spectral signatures, it is possible to use data from the different bands to highlight the                      different land types in the map. A colour composite image is the layering of red, green, and blue images to create a                      new image. So for a true colour composite image (the image that best represents reality), one would use the satellite                      data for the red, green, and blue visible light wavelengths for the red, green, and blue layers respectively. But, if                      one wanted a certain type of land to stand out on their map (for example, better to better showcase the difference                        between healthy and unhealthy vegetation), it would be better to use the data from a different sensor/band in their                        colour composite. This is called a false colour composite image.</p>
+                <p>For my remote sensing assignment, I chose to make a map of the Arve Valley, in the French Alps using Google Earth                          Engine, as it provides open access to all of the satellite data often used in remote sensing. The professor discussed                      how we tend to be egocentric in mapmaking, by focusing on places that are closer to us, and that definitely resonates                      here, as I grew up in the Arve Valley. The Arve Valley is a tourist area, known for its proximity to the Mont Blanc and                    its many skiing domains. It is (or was, depending on when you’re reading this) also home to several glaciers, including                    the Mer de Glace. My original plan was to take satellite data from 1976 and from 2021 to show how the glacier’s area                      has changed over 45 years. However, I struggled in using Landsat data and clearing the cloud coverage. So instead, I                      chose to only use Sentinel 2 data from 2021-2022, and showcase how the snow coverage changes over the course of a ski                      season (October to March) to assess when the best time to go skiing is. Sentinel 2 is a passive sensor with 12 bands.                      For each month, I created a true colour composite using bands B4 (red), B3 (green), and B2 (blue), and a false colour                      composite that highlighted snow coverage in blue using bands B12 (SWIR), B11 (SWIR), and B5 (VNIR). Snow reflects a lot                    of the very near infrared wavelengths, so by including this in my false colour composite image, it makes the snow stand                    out a lot against the rest of the map.</p> 
+            </div>
+        </div>
+                    
+            <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
